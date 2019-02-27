@@ -6,7 +6,7 @@
     instance_ids:
       - 'i-015306bddb086b3ef'
     security_group: webservers_sg
-    image: ami-035b67ea7b753ee7b 
+    image: ami-035b67ea7b753ee7b
     keypair: abcdef
     region: us-west-1
     count: 1
@@ -19,8 +19,8 @@
         aws_access_key: "{{ aws_access_key }}"
         aws_secret_key: "{{ aws_secret_key }}"
         group: "{{ security_group }}"
-        instance_ids: '{{ instance_ids }}' 
+        instance_ids: '{{ instance_ids }}'
         wait: true
         region: "{{ region }}"
-        state: stopped 
+        state: running
       register: ec2
